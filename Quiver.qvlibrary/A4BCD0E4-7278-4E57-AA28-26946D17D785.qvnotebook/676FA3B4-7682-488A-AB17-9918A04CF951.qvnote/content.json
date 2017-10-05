@@ -1,0 +1,23 @@
+{
+  "title": "Lecture - Practical Promises",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3 style=\"font-size: 17.209999084472656px;\">Promises Keyword</h3><span style=\"font-size: 15px;\">callback - function that passed to another function</span><div><ul><li style=\"font-size: 15px;\">Blocking<br></li><ul style=\"font-size: 15px;\"><li>example: arr.filter</li></ul><li style=\"font-size: 15px;\">Non-blocking - help us deal with control flow</li><ul><li style=\"font-size: 15px;\">Asynchronous&nbsp;</li><li style=\"font-size: 15px;\">event handlers - run callback function occurs when event occurs</li><li style=\"font-size: 15px;\">Middleware - callback function occurs when a request comes in</li><li style=\"font-size: 15px;\">.sendFile - vanilla async</li></ul><li><span style=\"font-size: 15px;\">people usually mean vanilla async</span></li><li style=\"font-size: 16px;\">alternative to vanilla async is promises</li><li style=\"font-size: 16px;\">promise function returns a object that can be accessed in the next .then</li><ul><li style=\"font-size: 16px;\">then is a method of promise object</li></ul><li><font size=\"3\">always define error handling in promise object at the end, so it catches all errors that occur before</font></li><li style=\"font-size: 15px;\">advantages&nbsp;</li><ul><li style=\"font-size: 15px;\">ortable</li><li style=\"font-size: 15px;\">multiple handlers</li><li style=\"font-size: 15px;\">‘linear’</li><li style=\"font-size: 15px;\">Unified error handling</li></ul></ul></div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "// vanilla async callback\nfs.readFile('file.txt') {\n  function callback (err.data) {\n  }\n}\n\n// async promise\nfs.readFileAsync('file.text')\n.then (\n  function success() {\n    result \n  }\n)\n}"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "var promiseForNum = function(val) {\n  return new Promise(function(resolve, reject) {\n    setTimeout(function() {\n      if (typeof val !== 'number') reject(new Error(\"Not a number\"));\n      else resolve(val);\n    }, 2500);\n  })\n}\n\npromiseForNum(10)\n.then(function(num) {\n  console.log(\"here's the num: \", num);\n}) // to run, in terminal ---- node filename.js\n\n\n// to add error handling\npromiseForNum(10)\n.then(function(num) {\n  console.log(\"here's the num: \", num);\n}, function(err) {\n  console.log('error occured: ', err);\n})\n\n// chaining\npromiseForNum(12)\n.then(function(num) {\n  console.log(num);\n  return promiseForNum(15);\n})\n.then(function(num) {\n  console.log(num);\n}) // logs 12, then logs 15\n\n// capture return value of promises and use later\nvar createArray = [];\nfor (var i = 0; i < 3; i++) {\n  createArray.push(createArray(i));\n}\nconsole.log(createArray);\n// [promise, promise, promise]\n\nPromise.all(createArray)\n.then(function(nums) {\n  console.log(nums)\n})\n// "
+    },
+    {
+      "type": "text",
+      "data": "<h2>Must-Know</h2><div><ul><li><code>​</code>​calling&nbsp;<code>​.then</code>​ to get the value of a promise<br></li><li>returning a promise to a handler, getting the value in the next&nbsp;<code>​.then</code>​</li><li>using&nbsp;<code>​catch</code>​ in a promise chain, how errors bubble through a chain</li><li>Using&nbsp;<code>​Promise.all</code>​ to wait for the results of parallel promises</li><li>Promises represent the eventual result of an asynchronous operation</li><li>an error return in a&nbsp;<code>​.then</code>​ will skip any following&nbsp;<code>​.then</code>​ until it finds an error handling&nbsp;<code>​.then</code>​ and the&nbsp;<code>​.then</code>​ after the error will not run</li><li><code>​.then</code><span style=\"background-color: rgba(0, 0, 0, 0.0392157);\">​ method takes 2 parameters</span><br></li><ul><li><span style=\"background-color: rgba(0, 0, 0, 0.0392157);\">a callback function to run if promise is successfully fulfilled (a success handler)</span></li><li><span style=\"background-color: rgba(0, 0, 0, 0.0392157);\">a callback function to run if promis is rejected (an error handler)</span></li></ul><li>promise.each</li><ul><li>iterates through array in order and waits for each resolve before move to the next</li></ul><li>promise.all (parallel)</li><ul><li>waits for all the resolve issues at once, and returns when the last has returned</li></ul></ul></div>"
+    }
+  ]
+}

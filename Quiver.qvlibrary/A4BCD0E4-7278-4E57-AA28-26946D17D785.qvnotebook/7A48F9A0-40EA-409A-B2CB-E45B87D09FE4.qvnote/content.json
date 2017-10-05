@@ -1,0 +1,31 @@
+{
+  "title": "Pre-Reading - Practical Promises",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>Promises in Node.js: an Alternative to Callbacks -&nbsp;<a href=\"https://developer.ibm.com/node/2016/08/24/promises-in-node-js-an-alternative-to-callbacks/\">https://developer.ibm.com/node/2016/08/24/promises-in-node-js-an-alternative-to-callbacks/</a></h3><div><br></div><div style=\"font-size: 15px;\">Promises</div><div><ul><li style=\"font-size: 15px;\">is a complex composition of more fundamental JavaScript elements: objects, properties, callbacks, closure, etc</li><li style=\"font-size: 15px;\">it’s not a data type (like functions or symbols, but rather a high-level implementation of the community-developed Promises/A+ spec</li><li style=\"font-size: 15px;\">alternative to callbacks when <b>dealing with asynchronous code</b>; an object that proxies for the return value or exception thrown by a function that has to do some asynchronous processing<br></li><li style=\"font-size: 15px;\"><b>Promises/A+</b> - a specification has made its way into ES6 JavaScript</li><li style=\"font-size: 15px;\">core component of a promise object is its then method</li><ul><li style=\"font-size: 15px;\">the <b>then</b> method is how we return value (aka fulfillment value) or the exception thrown (aka rejection reason) for an asynchronous operation, then takes 2 optional callbacks as arguments, called onFulfilled and onRejected</li></ul><li><span style=\"font-size: 15px;\">IMOW - Promises is a collection of vanilla JavaScript (objects, properties, callbacks, closures, etc) that stands in place for the return value of asynchronous functions to run while waiting for code to finish running</span></li></ul></div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "var promise = doSomethingAync()\npromise.then(onFulfilled, onRejected)"
+    },
+    {
+      "type": "text",
+      "data": "onFulfilled and onRejected are called when the promise is resolved (asynchronous processing has completed), only one will ever be triggered since ony one resolution is possible"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Callbacks to promises&nbsp;</h3><div>Given this basic knowledge of promises, let’s take a look at a familiar asynchronous Node callback:</div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "readFile(function (err, data) {\n  if (err) return console.error(err)\n  console.log(data)\n})"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}

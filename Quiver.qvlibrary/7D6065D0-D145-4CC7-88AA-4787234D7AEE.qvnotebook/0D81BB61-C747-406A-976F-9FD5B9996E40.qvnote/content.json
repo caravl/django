@@ -1,0 +1,14 @@
+{
+  "title": "Lecture - ORM & Sequelize - Wikistacks",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>Databases</h3><div><ul><li>2 sets of rules to distinguish db from one another</li><ul><li>ACID - Atomicity, Consistency, Isolation, Durability</li><ul><li>describes individual transaction - each transaction follows these rules</li></ul><li>CAP Theorem</li><ul><li>Consistency - all clients see the same data</li><li>Availability - &nbsp;each client can always read or wirite</li><li>partition tolerance - system works even if network splits</li></ul></ul></ul><h3>ORM / Sequelize</h3></div><div><ul><li>access SQL db from Node.js</li><li>define schema</li><li>Hooks - code that runs pre/post save/delete/update</li><li>query building</li><li>PostgreSQL tables: rows = Sequelize models: instances</li><li>lives inside Node.js process</li><li>knows how to communicate to a few SQL dbms</li><li>main difference: queries are in the form of javascript objects and responses are javascript objects, with methods that we can utilize</li></ul><div>Steps</div></div><div><ol><li>Make a model (define schema)</li><li>extenc the model with Hooks, Class &amp; Instance Methods, Virtuals, etc</li><li>Connect/sync the completed Model to an actual table in an actual SQL database</li><li>Use the model (Table) to create/find Instances (row)</li><li>Use the instances to save/update/delete</li></ol></div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "// Create db\n\nconst Sequelize = require('sequelize');\nconst db = new Sequelize('postgres://localhose:5432/twitter');\nconst User = db.define('user', {\n  name: Sequelize.STRING,\n  pictureURL: Sequelize.STRING\n});\n\n// sync model to table\nUser.sync().then(..)\n\n// model and instance usage\nconst person = User.build({\n  name: 'Kate',\n  pictureURL: 'http..'\n});\n\nperson.save()\n.then(..);\n\nUser.findAll() \n.then(..);"
+    }
+  ]
+}

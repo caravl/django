@@ -1,0 +1,21 @@
+{
+  "title": "HTML & CSS",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<ul><li>Html - content</li><li>css - style</li><li>Layout is the combination</li></ul><div>CSS</div><div><ul><li>rule - one curly bracket</li><li>Declaration - border: 1px solid red;</li><li>selector - the element we’re changing</li><li>property - border</li><li>Value - 1px solid red</li></ul><div>Selectors&nbsp;</div></div><div><ul><li>tag</li><li>Class - .bn</li><li>Id - #upload</li><li>Attribute</li><li>Pseudo-element - ::after</li><li>Pseudo-class - :hover</li></ul><div>Combinators</div></div><div><ul><li>descendent - whitespace</li><li>Child &gt;</li><li>next sibling +</li><li>later sibling ~</li><li>Tag.class - both tag and the class</li><li>Tag .class - has .class that is a child of tag</li><li>Tag,.class - with either tag or class</li><li>tag+.class - .class whose left sibling match tag</li></ul><div>Conflicts</div></div><div><ul><li>Inline attribute like style=“background: orange;” wins over id and class</li><li>!important wins over inline</li></ul></div>"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/F91076580EDE4DCAE2E150A7B44D4665.jpg\" width=\"2000\" height=\"1125\">"
+    },
+    {
+      "type": "text",
+      "data": "Responsive Design<div><ul><li>chrome dev tools</li><ul><li>allows you to shrink size and test</li></ul><li>Flex box</li><ul><li>Module that provides a way to lay out site when not know size or it’s always changing</li><li>caniuse.com&nbsp;</li></ul></ul></div>"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/98659B1C4CE88E06312294769EDD981A.jpg\" width=\"2000\" height=\"1125\">"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Lecture - Boxing",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Boxing<div><ul><li>box diagramming technique (for css layout)</li><ul><li>give visual spec of what the page would look like</li><li>Relative - absolute</li><ul><li>50% - 50px</li><li>10rem - 10pt</li><ul><li>rem is relative to html element’s text size</li></ul><li>3em - 3in</li><ul><li>em is relation to body element’s text size</li></ul></ul></ul><li>box model</li><ul><li>Margin&nbsp;</li><li>border</li><li>padding&nbsp;</li><li>Content&nbsp;</li></ul><li>an element’s background is content and padding</li></ul></div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "{\n  // sets the content for the specified width and height, instead of padding padding to it\n  box-sizing: content-box;\n  //\n  box-sizing: border-box;\n}"
+    }
+  ]
+}

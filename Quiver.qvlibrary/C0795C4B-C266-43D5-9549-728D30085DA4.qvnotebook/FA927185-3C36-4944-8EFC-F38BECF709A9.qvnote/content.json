@@ -1,0 +1,9 @@
+{
+  "title": "Synchronous vs Asynchronous",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3><span style=\"font-size: 14px;\">Synchronous</span></h3><div style=\"font-size: 14px;\"><ul><li>in synchronous programs, if you have 2 lines of code (L1 followed by L2), then L2 cannot begin running until L1 has finished executing<br></li><li>RL example - a line of people waiting to buy train tickets, you can’t begin to buy a train ticket until all the people in front you have finished</li></ul><h3>Asynchronous</h3></div><div><ul><li style=\"font-size: 14px;\">in asynchronous programs, you can have 2 lines of code (L1 followed by L2), where L1 schedules some task to be run in the future, but L2 runs before that task completes</li><li><span style=\"font-size: 14px;\">RL example</span> - <span style=\"font-size: 14px;\">sit down restaurant - other people order their food, you order your food. you don’t have to wait for them to receive their food and finish eating before you order. Other people don’t have to wait for you to get your food and finish eating before they can order. Everyone will get their food as soon as it’s finished cooking</span></li></ul></div>"
+    }
+  ]
+}

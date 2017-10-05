@@ -1,0 +1,63 @@
+npm installation
+  shown under dependencies in package.json
+  "scripts"
+    "start" = "nodemon app.js" --- run npm start in terminal will populate
+    "test" --- run npm test in terminal
+
+res redirect
+  when a request comes in, redirect person to another page
+  without a redirect, browser would hang
+  cant use res.redirect and res.send in the same get
+
+using jQuery to add new tweets to DOM vs using templating?
+  nunjucks cant dynamically update the page after its been loaded, so we need somethiing like jQuery for it
+
+how to keep track of whats passing where to where
+  is it client side or server side -- all node command is server side, all javascript or html is client side
+
+  res.render took in some data from server and being populated to client side
+
+  req.params (client input to server side)
+
+  form (client input to server)
+
+app is the name pipeline
+  app.listen
+  app.use
+  other app. methods
+
+
+middleware the function passed into methods like app.use or app.get
+  a callback function that does an extra step that doesn't necessarily return anything, looking for other methods that match AFTER it
+
+next()
+  to use next, must pass it in the callback function
+
+
+router vs app
+  router is a mini app that we've passed to express
+  to organize a group of specific route in a mini app
+  each router dealing with user requests, requests for tweets
+
+sockets.io
+  why are are we passing along io to router-returning function
+  not part of
+
+
+node
+express
+sql
+react
+
+
+layout.html is basic structure of page
+index.html is the body of the page where js is implemented (?)
+
+
+
+QUESTIONS
+- memorize syntax???
+- what does each module do? it's part of the whole?
+- what does nunjucks / module.exports / lodash / sockets.io / next() / action verbs and their definitions?
+- what is the difference between npm install morgan and npm morgan --save
+- res.render takes first parameter of the page we're rendering, and second parameter of what we're passing into that page

@@ -1,0 +1,45 @@
+{
+  "title": "1. Node",
+  "cells": [
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "// BUILDING MODULES\n\n// share this Square constructor function with another file, use module exports, so when it's required in another file, it will pass on the constructor function\n\nvar Square = function(lengthOfSide) {\n  this.length = lengthOfSide;\n}\n\nSquare.prototype.perimeter = function() {\n  return this.length * 4;\n}\n\nmodule.exports = Square;\n\n// in the other file: don't need to include .js\nvar SquareConstructor = require('./square');\nvar ourSquare = new SquareConstructor(4);\nconsole.log(ourSquare.perimeter()); \n// 16"
+    },
+    {
+      "type": "text",
+      "data": "<div><hr></div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "// USING BUILT-IN MODULES\n\n// node ships with many built-in modules\n// to gain access, we have to require them, but don't have to specify location of the file\nvar url = require('url');"
+    },
+    {
+      "type": "text",
+      "data": "<hr>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "// USING NPM\n\n// create package.json - description about your node project, and hold the 3rd party modules you've installed\nnpm init\n\n// --save will update package.json to include the module you've added and that it's a dependency of your project\nnpm install express --save"
+    },
+    {
+      "type": "text",
+      "data": "<hr>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "// ASYNCHRONICITY\n\n// there are certain operations in JavaScript that take an indeterminate amount of time to complete, and instead of locking up program and having it wait, it continutes operating the program. when the operation has completed, sends message that it's complete and the result itself\n\n// fs library is built into node - allows you to interact with machine's file system\nvar fs = require('fs');\n\n// fs is going to read the file it's on\n// after fs has gone to the harddrive and found the file given, it's going to signal to the program and call the callback function \n// 1st parameter take err \n// 2nd parameter is the contents we get back from the readFile\n// contents always come back as a buffer (a binary representation of the file itself)\nfs.readFile('./main.js', function (err, contents) {\n  console.log(contents.toString()); // toString method of buffer\n});\n// will return the above function as a string\n\n// the below console log would evaluate before the readFile\nconsole.log('Hello');"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}

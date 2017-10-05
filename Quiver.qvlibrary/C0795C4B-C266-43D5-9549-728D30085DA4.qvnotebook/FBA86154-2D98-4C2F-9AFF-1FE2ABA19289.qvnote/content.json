@@ -1,0 +1,41 @@
+{
+  "title": "ES6",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>let</h3><div><ul><li>statement declares a block scope local variable, optionally initializing it to a value</li><li>variables declared by let have as their scope the block in which they are defined, as well as in any contained sub-blocks</li><li>main difference is scope of a var variable is the entire enclosed function (see example below)</li></ul></div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "let var1 = value1\n\nfunction varTest() {\n  var x = 1;\n  if (true) {\n    var x = 2; // same variable\n    console.log(x); // 2\n  }\n  console.log(x); // 2\n}\n\nfunction letTest() {\n  let x = 1;\n  if (true) {\n    let x = 2; // a different variable\n    console.log(x); // 2\n  }\n  console.log(x); // 1\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Arrow Functions</h3><div><ul><li>shorter syntax than a function expression and does not bind its own&nbsp;<code>​this</code>​,&nbsp;<code>​arguments</code>​,&nbsp;<code>​super</code>​,&nbsp;<code>​new.target</code>​</li><li>best suited for non-method functions</li><li>cannot be used as constructors</li></ul></div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "var materials = [\n  'Hydrogen',\n  'Helium',\n  'Lithium',\n  'Beryllium'\n  ];\n  \n// function expression\nmaterial.map(function(material) {\n  return material.length;\n});\n// [8,6,7,9]\n\n// arrow function\nmaterial.map( (material) => {\n  return material.length;\n})\n// [8,6,7,9]\n\n// without curly brackets\nmaterial.map(material => material.length);\n// [8,6,7,9]"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Const</h3><div><ul><li>Block-scoped, much like variables defined using the let statement</li><li>value of const <b>cannot change through re-assignment and can’t be redeclared</b></li></ul></div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "// convention is to use all-uppercase\nconst MY_FAV = 7;\n\n// cannot re-assign\nMY_FAV = 20;\nlet MY_FAV = 20;\n// error\n\n// cannot re-declare\nconst MY_FAV = 20;\n\n// block-scoping\nif (MY_FAV === 7) {\n  // this creates a block scoped MY_FAV variable\n  let MY_FAV = 20; // MY_FAV is now 20\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Conditional (Ternary) Operator</h3><div><ul><li>only JS operator that takes 3 operands<br></li><li>frequently used as a shortcut for the&nbsp;<code>​if</code>​ statement<br></li></ul></div>"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "condition ? expr1 : expr2\n// condition evaluates to true or false\n\n// if condition is true, operator returns expr1\n// if condition is false, operator returns expr2\n\n'The fee is ' + (isMember ? '$2.00' : '$10.00');\n// if isMember is true, 'The fee is $2.00'\n// if isMember is false, 'The fee is $10.00'"
+    }
+  ]
+}

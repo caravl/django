@@ -1,0 +1,9 @@
+{
+  "title": "Git Steps for Workshops",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>If there’s an pre-existing starting point:&nbsp;</h3><div><ol><li>Fork the workshop starting point on Github</li><li>Clone your fork onto your own machine:&nbsp;<code>​git clone</code>​&nbsp;<code>​URL-TO-YOUR-FORK-HERE</code>​</li><li>Add to your partner’s fork as a remote called “partner”:&nbsp;<code>​git remote add partner URL-TO-PARTNER-FORK-HERE</code>​</li><li>To check if you’ve successfully added “partner”, list all the remotes associated with your local repo:&nbsp;<code>​git remote -v</code>​</li><li>If you made a mistake adding “partner”, you can always remove it and then try step 3 again:&nbsp;<code>​git remote rm partner&nbsp;</code></li></ol><h3><code>​</code>​If there’s no starting point:&nbsp;</h3></div><div><ol><li>Make a directory for the workshop on your computer:&nbsp;<code>​mkdir WORKSHOP-NAME-HERE</code>​</li><li>Create a local git repo in that directory:&nbsp;<code>​cd WORKSHOP-NAME-HERE &amp;&amp; git init</code>​</li><li>Make a new repo on GitHub</li><li>Add your new GitHub repo as a remote for your local repo:&nbsp;<code>​git remote add origin URL-TO-YOUR-FORK-HERE</code>​</li><li>Add your partner’s fork as a remote called “partner”:&nbsp;<code>​git remote add partner URL-TO-PARTNER-FORK-HERE</code></li></ol><h3><code>​</code>​When it’s your turn to drive on your machine:</h3></div><div><ol><li>Get your partner’s work:&nbsp;<code>​git pull partner master</code></li><li><code>​</code>​Stage your changes:&nbsp;<code>​git add -A&nbsp;</code>​<br></li><li>Commit your work:&nbsp;<code>​git commit -m “commit message here”</code></li><li>​<code>​</code>​Push your work up to your remote repo:&nbsp;<code>​git push origin master</code></li></ol></div>"
+    }
+  ]
+}
