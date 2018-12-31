@@ -1,9 +1,0 @@
-{
-  "title": "To Do",
-  "cells": [
-    {
-      "type": "text",
-      "data": "<div>Deadline - Saturday AM</div><div><br></div><div><input type=\"checkbox\">&nbsp;import notes into Quiver</div><div><input type=\"checkbox\" checked=\"checked\">&nbsp;<b>Code School Express</b></div><div><input type=\"checkbox\" checked=\"checked\">&nbsp;<b>complete Data Structure Checkpoint</b></div><div><input type=\"checkbox\">&nbsp;<b>Express Checkpoint</b></div><div><input type=\"checkbox\">&nbsp;create skeleton (comments) for Express</div><div><input type=\"checkbox\" checked=\"checked\">&nbsp;finish ES6 in References<br></div><div><input type=\"checkbox\" checked=\"checked\">&nbsp;finish install linter<br></div><div><ul><li><span style=\"font-size: 15px;\">look up setTimeout function</span></li><li><span style=\"font-size: 15px;\">what is fs.readFile(), fs.anything</span></li></ul></div>"
-    }
-  ]
-}
